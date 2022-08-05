@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page test</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -20,21 +24,30 @@
 
             <nav class="headerNav">
                 <ul>
-                    <li>
-                        <a href="">Conheça a Linx</a>
-                    </li>
+                    <a href="">
+                        <li>
+                            Conheça a Linx
+                        </li>
+                    </a>
 
-                    <li>
-                        <a href="">Ajude o algoritmo</a>
-                    </li>
+                    <a href="">
+                        <li>
+                            Ajude o algoritmo
+                        </li>
+                    </a>
 
-                    <li>
-                        <a href="">Seus produtos</a>
-                    </li>
+                    <a href="">
+                        <li>
+                            Seus produtos
+                        </li>
+                    </a>
 
-                    <li>
-                        <a href="">Compartilhe</a>
-                    </li>
+                    <a href="">
+                        <li>
+                            Compartilhe
+                        </li>
+                    </a>
+
 
                 </ul>
 
@@ -54,10 +67,12 @@
 
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ex itaque consectetur delectus vitae nemo nostrum soluta mollitia ipsam voluptas quo repellat eaque exercitationem perspiciatis, provident ipsa. Natus, odit odio!Lorem
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe officiis reiciendis porro quos neque dolor in aperiam dolore molestiae consequatur! Obcaecati odit autem, unde dignissimos est assumenda provident quis voluptatum?
                 </p>
 
                 <p>
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum, odit voluptate numquam dolor natus deserunt magni quia mollitia voluptatum iste expedita exercitationem impedit quaerat repudiandae alias corporis! Quibusdam, voluptates ullam!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi at nihil odit quidem. Voluptatem dolorum quam ea et officia omnis porro laboriosam. Corrupti ullam repudiandae accusantium laudantium maxime soluta officia.
                 </p>
 
             </div>
@@ -66,11 +81,17 @@
 
                 <form action="">
 
-                    <input type="text" placeholder="Digite seu nome">
+                    <input class="text" type="text" placeholder="Digite seu nome">
 
-                    <input type="email" placeholder="Digite seu e-mail">
+                    <input class="text" type="email" placeholder="Digite seu e-mail">
 
-                    <input type="text" placeholder="Digite seu CPF">
+                    <input class="text" type="text" placeholder="Digite seu CPF">
+
+                    <input class="maleFemale" type="radio" name="male" id="male">
+                    <label for="male">Masculino</label>
+
+                    <input class="maleFemale" type="radio" name="female" id="female">
+                    <label for="female">Feminino</label>
 
                     <button type="submit">Enviar</button>
 
@@ -83,6 +104,12 @@
         <section class="mainProducts">
             <div class="productsWrapper">
 
+                <div class="lineSection"></div>
+
+                <div class="sectionTitle">
+                    <h2>Sua seleção especial</h2>
+                </div>
+
                 <div class="productSingle" id="${product.id">
                     <img src="${product.image}" alt="">
                     <h3  class="name">${product.name}</h3>
@@ -90,7 +117,7 @@
                     <span>De ${product.oldPrice}</span>
                     <span>Por ${product.price}</span>
                     <span>ou 2x de </span>
-                    <button type="submit">Comprar</button>
+                    <button type="menu" ></button>
                     
                 </div>
 
@@ -98,6 +125,7 @@
 
             </div>
         </section>
+
 
     </main>
 
