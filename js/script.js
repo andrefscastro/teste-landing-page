@@ -4,7 +4,7 @@ async function getContent() {
 
         const data = await response.json()
 
-        show(data)
+        show(data.products)
 
     } catch (error) {
         console.log(error)
@@ -20,16 +20,19 @@ function show(products) {
     for(let product of products) {
         output += `
         
+        <div class="productSingle" id="${product.id}">
                     <img src="${product.image}" alt="">
                     <h3  class="name">${product.name}</h3>
                     <p class="description">${product.description}</p>
-                    <span>De ${product.oldPrice}</span>
-                    <span>Por ${product.price}</span>
-                    <span>ou ${product.count} de ${product.value} </span>
-                    <button type="submit">Comprar</button>
+                    <span class="first">De ${product.oldPrice}</span>
+                    <span class="second">Por ${product.price}</span>
+                    <span>ou ${product.installments.count}x de R$${product.installments.value} </span>
+                    <button type="menu" >Comprar</button>
+                    
+                </div>
                     
         `
     }
 
-    document.querySelector('.productSingle').innerHTML =  output
+    document.querySelector('.productsWrapper').innerHTML =  output
 }

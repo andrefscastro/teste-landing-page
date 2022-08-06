@@ -128,7 +128,6 @@ body {
 }
 .main .mainProducts {
   width: 100%;
-  padding: 20px 200px;
 }
 .main .mainProducts .productsWrapper {
   width: 100%;
@@ -154,5 +153,46 @@ body {
 .main .mainProducts .productsWrapper .productSingle {
   width: 100%;
   max-width: 200px;
+  margin: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+.main .mainProducts .productsWrapper .productSingle img {
+  margin-bottom: 20px;
+  margin: 0 auto;
+}
+.main .mainProducts .productsWrapper .productSingle h3 {
+  font-size: 14px;
+  margin: 10px 0;
+}
+.main .mainProducts .productsWrapper .productSingle p {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.main .mainProducts .productsWrapper .productSingle span {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.main .mainProducts .productsWrapper .productSingle .first {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.main .mainProducts .productsWrapper .productSingle .second {
+  font-size: 19px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.main .mainProducts .productsWrapper .productSingle button {
+  width: 100%;
+  height: 30px;
   border: 1px solid #707070;
+  color: #888888;
+  font-size: 16px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+.main .mainProducts .productsWrapper .productSingle button:hover {
+  box-shadow: 0px 0px 10px black;
 }/*# sourceMappingURL=style.css.map */
