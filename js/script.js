@@ -5,7 +5,7 @@ async function getContent() {
 
 
     try {
-        const response = await fetch("https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=${page}")
+        const response = await fetch(`https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=${page}`)
 
         const data = await response.json()
 
