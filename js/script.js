@@ -1,6 +1,11 @@
+
+let page = 0
+
 async function getContent() {
+
+
     try {
-        const response = await fetch('https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=1')
+        const response = await fetch("https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=${page}")
 
         const data = await response.json()
 
@@ -9,6 +14,8 @@ async function getContent() {
     } catch (error) {
         console.log(error)
     }
+
+    page++
 }
 
 getContent()
@@ -35,4 +42,15 @@ function show(products) {
     }
 
     document.querySelector('.productsWrapper').innerHTML =  output
+
+    if(page === 3){
+        loadButton.classList.add('loadInvisible')
+    } else{
+        loadButton.classList.remove('loadInvisible')
+    }
 }
+
+let loadButton = document.querySelector('.loadButton');
+
+loadButton.onclick = function() {show(products)}
+
