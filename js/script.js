@@ -15,7 +15,13 @@ async function getContent() {
         console.log(error)
     }
 
-    page++
+    if(page == 5){
+        loadButton.classList.add('loadInvisible')
+    } else{
+        loadButton.classList.remove('loadInvisible')
+    }
+
+    
 }
 
 getContent()
@@ -43,14 +49,10 @@ function show(products) {
 
     document.querySelector('.productsWrapper').innerHTML =  output
 
-    if(page === 3){
-        loadButton.classList.add('loadInvisible')
-    } else{
-        loadButton.classList.remove('loadInvisible')
-    }
+    page++;
 }
 
 let loadButton = document.querySelector('.loadButton');
 
-loadButton.onclick = function() {show(products)}
+loadButton.onclick = function() {getContent()}
 

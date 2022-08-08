@@ -52,12 +52,14 @@ body {
             font-size: 16px;
             font-weight: lighter;
             margin-bottom: 40px;
+            text-align: center;
         }
 
         .headerNav {
             width: 100%;
 
             ul {
+                width: 100%;
                 display: flex;
                 align-items: center;
                 justify-content: space-around;
@@ -100,7 +102,7 @@ body {
         padding-bottom: 100px;
         display: flex;
         flex-wrap: nowrap;
-        align-items: flex-start;
+        align-items: center;
         justify-content: space-around;
     
         .mainText {
@@ -136,9 +138,19 @@ body {
                     
                 }
     
+            
                 .maleFemale {
                     margin-bottom: 30px;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+
+                    label {
+                        margin: 0 10px;
+                    }
+                    
                 }
+            
     
                 button {
                     width: 100%;
@@ -202,6 +214,7 @@ body {
                 align-items: flex-start;
                 justify-content: center;
                 flex-direction: column;
+                transition: all 200ms ease;
 
                 img {
                     margin-bottom: 20px;
@@ -318,6 +331,7 @@ body {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+                flex-wrap: wrap;
 
 
                 input {
@@ -357,5 +371,147 @@ body {
         margin-top: 20px;
         font-size: 12px;
         color: $color-primary;
+    }
+}
+
+
+@media (max-width:1473px) {
+
+    .share {
+        .shareWrapper {
+            .formWrapper {
+                flex-direction: column;
+                justify-content: center;
+
+                input {
+                    margin: 10px 0;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width:1173px) {
+
+    .header {
+
+        padding: 20px;
+
+        .headerWrapper {
+            .headerNav {
+                justify-content: space-between;
+                ul {
+                    a {
+                        margin: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width:1069px) {
+
+    .main {
+
+        .mainForm {
+           flex-direction: column;
+            text-align: justify;
+
+            .mainText {
+                margin-bottom: 30px;
+                
+            }
+
+            .formWrapper {
+                width: 100%;
+                padding: 0;
+            }
+                
+                
+                
+            
+        }
+    }
+    
+}
+
+@media (max-width:808px) {
+
+    .header {
+        .headerWrapper {
+            ul {
+                justify-content: space-between;
+            }
+        }
+    }
+
+    .main {
+        padding: 20px;
+
+        .mainProducts {
+            .productsWrapper {
+                justify-content: space-around;
+            }
+        }
+
+        .share {
+            .shareWrapper {
+                padding: 0;
+
+                .formWrapper {
+                    input {
+                        max-width: 600px;
+                    }
+                }
+            }
+        }
+    }
+
+    
+}
+
+@media (max-width:514px) {
+    
+    .header {
+
+        .headerWrapper {
+
+            .headerNav {
+                
+                justify-content: space-around;
+
+                ul {
+                    a {
+                        margin: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:459px) {
+    
+    .header {
+
+        .headerWrapper {
+            padding: 0;
+
+            .headerNav {
+                flex-direction: row;
+                justify-content: space-around;
+
+                ul {
+                    padding: 0;
+                    width: 100%;
+                    a {
+                        margin: 5px;
+                    }
+                }
+            }
+        }
     }
 }
